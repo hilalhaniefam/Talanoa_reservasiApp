@@ -18,15 +18,33 @@ class Body extends StatelessWidget {
           ),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.symmetric(vertical: 11),
               minimumSize: Size(160, 40),
-              textStyle: TextStyle(fontSize: 18),
+              textStyle: TextStyle(fontFamily: 'Sansation', fontSize: 18),
               primary: Colors.black,
               side: BorderSide(width: 2, color: Colors.black),
               // onPrimary: Colors.black,
             ),
             onPressed: () =>
                 Fluttertoast.showToast(fontSize: 10, msg: "Sign Up"),
-            child: Text("Sign up"),
+            child: Text("Sign Up"),
+          ),
+          SizedBox(height: size.height * 0.01),
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              padding: EdgeInsets.symmetric(vertical: 11),
+              minimumSize: Size(160, 40),
+              textStyle: TextStyle(fontFamily: 'Sansation', fontSize: 18),
+              primary: Colors.black,
+              side: BorderSide(width: 2, color: Colors.black),
+              // onPrimary: Colors.black,
+            ),
+            onPressed: () => Fluttertoast.showToast(fontSize: 10, msg: "Login"),
+            child: Text("Login"),
           )
         ],
       ),
