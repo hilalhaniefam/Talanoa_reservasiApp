@@ -3,10 +3,14 @@ import 'package:reservasi_app/Screens/Welcome/welcome_screens.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
   _SplashScreen createState() => _SplashScreen();
 }
 
 class _SplashScreen extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
     splashscreenStart();
@@ -17,7 +21,7 @@ class _SplashScreen extends State<SplashScreen> {
     return Timer(duration, () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => WelcomeScreen()),
+        MaterialPageRoute(builder: (context) => const WelcomeScreen()),
       );
     });
   }

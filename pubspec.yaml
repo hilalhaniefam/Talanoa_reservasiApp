@@ -78,6 +78,7 @@ flutter:
     - family: Sansation
       fonts:
       - asset: assets/fonts/Sansation_Bold.ttf
+      - asset: assets/fonts/Sansation_Regular.ttf
    # - family: Schyler
     #  fonts:
      #   - asset: fonts/Schyler-Regular.ttf
