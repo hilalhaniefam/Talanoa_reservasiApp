@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:reservasi_app/Screens/Login/login_screen.dart';
+import 'package:reservasi_app/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -26,23 +27,28 @@ class Body extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               padding: const EdgeInsets.symmetric(vertical: 11),
               minimumSize: const Size(160, 40),
-              textStyle: const TextStyle(fontFamily: 'Sansation', fontSize: 18),
+              textStyle:
+                  const TextStyle(fontFamily: 'Sansation_Bold', fontSize: 18),
               primary: Colors.black,
               side: const BorderSide(width: 2, color: Colors.black),
               // onPrimary: Colors.black,
             ),
-            onPressed: () =>
-                Fluttertoast.showToast(fontSize: 10, msg: "Sign Up"),
-            child: const Text("Sign Up"),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SignupScreen()),
+              );
+            },
+            child: const Text('Sign Up'),
           ),
-          SizedBox(height: size.height * 0.01),
           OutlinedButton(
             style: OutlinedButton.styleFrom(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               padding: const EdgeInsets.symmetric(vertical: 11),
               minimumSize: const Size(160, 40),
-              textStyle: const TextStyle(fontFamily: 'Sansation', fontSize: 18),
+              textStyle:
+                  const TextStyle(fontFamily: 'Sansation_Bold', fontSize: 18),
               primary: Colors.black,
               side: const BorderSide(width: 2, color: Colors.black),
               // onPrimary: Colors.black,

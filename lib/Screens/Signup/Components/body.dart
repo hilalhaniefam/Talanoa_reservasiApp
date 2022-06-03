@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:reservasi_app/constants.dart';
-// import '../../../Components/rounded_input_field.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -13,7 +11,7 @@ class Body extends StatelessWidget {
       height: size.height,
       width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(height: size.height * 0.17),
           Image.asset(
@@ -21,6 +19,27 @@ class Body extends StatelessWidget {
             width: 226,
             height: 286,
           ),
+          SizedBox(
+            height: 37.83,
+            width: 287,
+            child: TextField(
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.symmetric(vertical: 2),
+                hintText: '   ' 'Nama Lengkap',
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:
+                        const BorderSide(color: Colors.black, width: 2.0)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  borderSide: const BorderSide(color: Colors.black, width: 2.0),
+                ),
+              ),
+              style: const TextStyle(
+                  fontFamily: 'Sansation_Reguler', fontSize: 15),
+            ),
+          ),
+          SizedBox(height: size.height * 0.01),
           SizedBox(
             height: 37.83,
             width: 287,
@@ -79,7 +98,7 @@ class Body extends StatelessWidget {
               // onPrimary: Colors.black,
             ),
             onPressed: () {},
-            child: const Text('Login'),
+            child: const Text('Sign Up'),
           ),
         ],
       ),
